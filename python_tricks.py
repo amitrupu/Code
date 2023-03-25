@@ -45,3 +45,7 @@ for file in test_filenames + ('test.c', 'test.cpp', 'test.h', 'test.hpp'):
     file_dict[file]['count'] += 1
 else:
     print(file_dict)
+
+# f-string
+name = "Amit"; age = 40
+print(f'My name is {name} or age {age}.')
