@@ -49,3 +49,16 @@ else:
 # f-string
 name = "Amit"; age = 40
 print(f'My name is {name} or age {age}.')
+
+# Multi-threading class using queue
+class MultiThreading:
+    def __init__(self, max_threads = 32):
+        import threading
+        import queue
+        self.max_threads = max_threads
+        self.queue = queue.Queue()
+        self.threads = []
+        for i in range(0, max_threads):
+            # th = threading.Thread(target=process_queue, args=(queue, func))
+            # th.start()
+            pass
