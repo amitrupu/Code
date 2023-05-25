@@ -39,7 +39,7 @@ unsigned find_max_unique_substring(const char *str, unsigned *start_index, bool 
 }
 
 // find max of unique sub-strings remembering earlier searches
-unsigned find_max_unique_substring_fast(const char *str, unsigned *start_index, bool last_max = false) {
+unsigned find_max_unique_substring_opt(const char *str, unsigned *start_index, bool last_max = false) {
     unsigned len = strlen(str);
     unsigned max_size = 0, start_for_max = 0;
     // create a table to hold char found and initialize with 0
@@ -83,7 +83,7 @@ int main() {
     cout << "Enter string: ";
     cin >> str;
     unsigned start_for_max;
-    unsigned max_size = find_max_unique_substring_fast(str, &start_for_max);
+    unsigned max_size = find_max_unique_substring_opt(str, &start_for_max);
     cout << "Max unique sub-string: size=" << max_size << ": ";
     printf("%.*s\n", max_size, str + start_for_max);
     return 0;
