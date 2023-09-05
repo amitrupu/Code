@@ -2,8 +2,9 @@
 #include <functional>
 using namespace std;
 
+vector<function<void()>> func_pool {
 // lamda
-void lambda_test() {
+[]() {
 	int a = 10, b = 20;
 	auto max = [] (int &a, int &b)->int& {
 		return (a>b)? a: b;
@@ -15,9 +16,21 @@ void lambda_test() {
 		f(a,b) = 0;
 	}(max);
 	cout << a << " " << b << endl;
+},
+
+// enum class
+[]() {
+	enum class X {one, two, three} x;
+	enum class Y {zero, one, two, three} y;
+	x = X::two;
+	y = Y::two;
+	cout << (x == X::two) << " " << (y > Y::zero) << endl;
 }
+};
 
 int main() {
-	lambda_test();
+	for (auto func : func_pool) {
+		func();
+	}
 	return 0;
 }
