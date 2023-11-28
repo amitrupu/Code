@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 #include <functional>
 using namespace std;
 
@@ -25,6 +26,17 @@ vector<function<void()>> func_pool {
 	x = X::two;
 	y = Y::two;
 	cout << (x == X::two) << " " << (y > Y::zero) << endl;
+},
+
+// array initialization and shared_ptr
+[]() {
+	shared_ptr<int> p (new int[10] {10}, [](int *p) { delete[] p; });
+	shared_ptr<int> q = make_shared<int>(10);
+	for (auto i = 0; i < 10; i++) {
+		cout << p.get()[i] << " ";
+	}
+	cout << endl;
+	q = p;
 }
 };
 
