@@ -1,0 +1,6 @@
+waveform: veriwell.dmp
+	gtkwave $^
+
+veriwell.dmp: *.*v
+	veriwell $^
+

@@ -1,0 +1,69 @@
+
+
+Veriwell version 2.8.7, 
+Copyright (C) 1993-2008 Elliot Mednick and Mark Hummel
+
+Veriwell comes with ABSOLUTELY NO WARRANTY; This is free
+software, and you are welcome to redistribute it under the
+terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License,
+or (at your option) any later version. 
+
+lxt  support compiled in
+lxt2 support compiled in
+
+Entering Phase I...
+Compiling source file : clockgen.v
+
+Entering Phase II...
+Entering Phase III...
+No errors in compilation
+Top-level modules:
+   tb
+
+                   0001
+                   5101
+                   7111
+                   8110
+                  10010
+                  14000
+                  15100
+                  16101
+                  20001
+                  21011
+                  24010
+                  25110
+                  28100
+                  30000
+                  32001
+                  35111
+                  40010
+                  42000
+                  45100
+                  48101
+                  49111
+                  50011
+                  55111
+                  56100
+                  60000
+                  63010
+                  64011
+                  65111
+                  70001
+                  72000
+                  75100
+                  77110
+                  80011
+                  84001
+                  85101
+                  88100
+                  90000
+                  91010
+                  95110
+                  96111
+                  98101
+Exiting Veriwell at time 100
+0 Errors, 0 Warnings, Compile time = 0.0, Load time = 0.0, Simulation time = 0.0
+
+Normal exit
+Thank you for using Veriwell

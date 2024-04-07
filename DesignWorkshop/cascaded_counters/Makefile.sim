@@ -1,0 +1,12 @@
+waveform: verilog.dump
+	gtkwave $^
+
+debug: simv
+	simv -verdi
+
+verilog.dump: simv
+	simv
+
+simv: *.*v
+	vcs -full64 -sverilog $^ -kdb -debug_access+all
+

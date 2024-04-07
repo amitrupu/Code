@@ -1,0 +1,9 @@
+waveform: dump.vcd
+	gtkwave $^
+
+dump.vcd: tb
+	vvp $^
+
+tb: *.*v
+	iverilog -o $@ $^
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Calculator
+        </title>
+    </head>
+    <body>
+        <p class="result">0</p>
+        <input class="input" placeholder="Enter value"><br><br>
+        <button onclick="calc('+')">+</button>
+        <button onclick="calc('-')">-</button>
+        <button onclick="calc('*')">*</button>
+        <button onclick="calc('/')">/</button>
+
+        <script>
+            let result = 0;
+            let domResult = document.querySelector(".result");
+            function calc(operator) {
+                let domInput = document.querySelector(".input");
+                let value = Number(domInput.value);
+                // console.log(result + ' ' + value);
+                domResult.textContent = result + ' ' + operator + ' ' + value;
+                if (operator === '+') {
+                    result += value;
+                } else if (operator === '-') {
+                    result -= value;
+                } else if (operator === '*') {
+                    result *= value;
+                } else if (operator === '/') {
+                    result /= value;
+                }
+                domResult.textContent += ' = ' + result;
+            }
+        </script>
+    </body>
+</html>
