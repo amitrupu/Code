@@ -40,6 +40,7 @@ vector<function<void()>> func_pool {
 }
 };
 
+// Main
 int main() {
 	for (auto func : func_pool) {
 		func();
