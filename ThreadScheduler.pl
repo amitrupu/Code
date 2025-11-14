@@ -91,7 +91,7 @@ sub update_hash($$$$) {
     $key_hash_ref->{count}++;
 }
 my $num_tasks = 100;
-my @task_name_set = ('A'..'D');
+my @task_name_set = ('A'..'F');
 my @task_names;
 for (my $i = 0; $i < $num_tasks; $i++) {
     my $random_index = int(rand @task_name_set);
