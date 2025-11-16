@@ -1,2 +1,4 @@
-/.vscode
-word_sort.exe
+.vscode
+*.o
+*.exe
+a.out
